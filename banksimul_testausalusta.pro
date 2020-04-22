@@ -6,9 +6,11 @@
 
 QT       += core gui
 
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = banksimul_testausalusta
+LIBS += "D:/projektit/eka_vuosi_nelosperiodi/build-banksimul_testausalusta-Desktop_Qt_5_9_1_MinGW_32bit-Debug/debug/kortinluku.dll"
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -32,7 +34,9 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     loginwindow.h \
-    korttipls.h
+    korttipls.h \
+    kortinluku.h \
+    kortinluku_global.h
 
 FORMS += \
         mainwindow.ui \
