@@ -11,6 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = banksimul_testausalusta
 LIBS += "D:/projektit/eka_vuosi_nelosperiodi/build-banksimul_testausalusta-Desktop_Qt_5_9_1_MinGW_32bit-Debug/debug/kortinluku.dll"
+                //LIBSiin kortinluku.dll tiedostosijainti
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
