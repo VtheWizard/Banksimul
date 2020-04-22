@@ -1,0 +1,12 @@
+#ifndef KORTINLUKU_GLOBAL_H
+#define KORTINLUKU_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(KORTINLUKU_LIBRARY)
+#  define KORTINLUKUSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define KORTINLUKUSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // KORTINLUKU_GLOBAL_H
