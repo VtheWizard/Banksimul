@@ -16,9 +16,8 @@ public:
     void nosto(int i);
     void talletus(int i);
     void luoTilitapahtuma(int luku, char c);
-    void yhdistaTietokantaan();
-    void suljeTietokanta();
     int getSaldo();
+    int getPIN();
     QStringList paivitaTilitapahtuma();
 
 private:

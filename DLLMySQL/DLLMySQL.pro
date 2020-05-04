@@ -34,6 +34,5 @@ unix {
     target.path = /usr/lib
     INSTALLS += target
 }
-
 DESTDIR = C:\QtData\build-Banksimul-Desktop_Qt_5_12_1_MinGW_64_bit-Release\release
 

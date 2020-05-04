@@ -27,8 +27,6 @@ private slots:
 
     void on_pushButton_nosta_clicked();
 
-    void on_pushButton_saldo_clicked();
-
     void on_pushButton_tapahtumat_clicked();
 
     void on_pushButton_talleta_clicked();

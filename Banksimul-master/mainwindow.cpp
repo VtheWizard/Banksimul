@@ -33,6 +33,8 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete objectDLLMySQL;
+    objectDLLMySQL = nullptr;
 }
 
 void MainWindow::on_pushButton_ulos_clicked()
@@ -42,37 +44,32 @@ void MainWindow::on_pushButton_ulos_clicked()
 
 void MainWindow::on_pushButton_nosta_clicked()
 {
-    if (objectDLLMySQL->getSaldo()<=0)
-    {
+    if(ui->spinBox_nosta->value() > objectDLLMySQL->getSaldo()) {
         QMessageBox::critical(this, "Virhe", "Saldo ei riitä nostoa varten");
-    }else
-    {
+    } else if(ui->spinBox_nosta->value() == 0) {
+        qDebug() << "älä tee mitään";
+    } else {
         objectDLLMySQL->nosto(ui->spinBox_nosta->value());
         ui->lcdNumber->display(objectDLLMySQL->getSaldo());
         qDebug()<<"Nostettu " << ui->spinBox_nosta->value()<< " euroa";
         QMessageBox::information(this, "Nosto", "Nosto suoritettu");
-
     }
     ui->lcdNumber->display(objectDLLMySQL->getSaldo());
-
-}
-
-void MainWindow::on_pushButton_saldo_clicked()
-{
-    QString saldostring = QString::number(saldo);
-    QMessageBox::information(this, "Saldo", saldostring);
 }
 
 void MainWindow::on_pushButton_tapahtumat_clicked()
 {
     aukaiseTapahtumat();
-
 }
 
 void MainWindow::on_pushButton_talleta_clicked()
 {
-    objectDLLMySQL->talletus(ui->spinBox_talleta->value());
-    ui->lcdNumber->display(objectDLLMySQL->getSaldo());
-    qDebug()<<"Talletettu "<<ui->spinBox_talleta->value()<<" euroa";
-    QMessageBox::information(this, "Talletus", "Talletus suoritettu");
+    if(ui->spinBox_talleta->value() == 0) {
+            qDebug() << "älä tee mitään";
+    } else {
+        objectDLLMySQL->talletus(ui->spinBox_talleta->value());
+        ui->lcdNumber->display(objectDLLMySQL->getSaldo());
+        qDebug()<<"Talletettu "<<ui->spinBox_talleta->value()<<" euroa";
+        QMessageBox::information(this, "Talletus", "Talletus suoritettu");
+    }
 }
