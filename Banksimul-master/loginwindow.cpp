@@ -7,24 +7,27 @@ loginwindow::loginwindow(QWidget *parent) :
     ui(new Ui::loginwindow)
 {
     ui->setupUi(this);
+    objectDLLMySQL = new DLLMySQL;
 }
 
 loginwindow::~loginwindow()
 {
     delete ui;
+    delete objectDLLMySQL;
+    objectDLLMySQL = nullptr;
 }
 
 void loginwindow::on_pushButton_login_clicked()
 {
-    if (passu==1234)
+    if (passu==objectDLLMySQL->getPIN())
     {
         aukasemaini();
         suljelogin();
-    }else
-        {
-            QMessageBox::critical(this,"Pin väärin", "Pin-koodi väärin, yritä uudelleen");
-            passu=0000;
-        }
+
+    } else
+    {
+        QMessageBox::critical(this,"Pin väärin", "Pin-koodi väärin, yritä uudelleen");
+    }
 }
 
 void loginwindow::on_yks_valueChanged(int value)

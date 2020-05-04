@@ -13,6 +13,8 @@ tapahtumat::tapahtumat(QWidget *parent) :
 tapahtumat::~tapahtumat()
 {
     delete ui;
+    delete objectDLLMySQL2;
+    objectDLLMySQL2 = nullptr;
 }
 
 void tapahtumat::paivitaTilitapahtumat() {

@@ -61,7 +61,7 @@ QStringList DLLMySQL::paivitaTilitapahtuma() {
         id = query.value(0).toString();
         maara = query.value(1).toString();
         if(maara.contains('-')) {
-            etuliite = "\bNOSTO:\t\t";
+            etuliite = "NOSTO:\t\t ";
         } else {
             etuliite = "TALLETUS:\t+";
         }
@@ -86,6 +86,20 @@ int DLLMySQL::getSaldo() {
         return saldo;
     } else {
         qDebug() << "getSaldo ei onnistunut.";
+        return 0;
+    }
+}
+
+int DLLMySQL::getPIN() {
+    QSqlQuery query;
+    query.exec("SELECT pin FROM tili where id = 1");
+    if(query.next()) {
+        saldo = query.value(0).toInt();
+        query.exec();
+        qDebug() << "getPIN onnistui.";
+        return saldo;
+    } else {
+        qDebug() << "getPIN ei onnistunut.";
         return 0;
     }
 }

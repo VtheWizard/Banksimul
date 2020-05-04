@@ -2,6 +2,7 @@
 #define LOGINWINDOW_H
 
 #include <QWidget>
+#include "mainwindow.h"
 
 namespace Ui {
 class loginwindow;
@@ -22,8 +23,6 @@ signals:
 private slots:
     void on_pushButton_login_clicked();
 
-
-
     void on_yks_valueChanged(int value);
 
     void on_kympit_valueChanged(int value);
@@ -36,6 +35,7 @@ private slots:
 
 private:
     Ui::loginwindow *ui;
+    DLLMySQL *objectDLLMySQL;
     int passu = 0000;
     int value1 = 0;
     int value2 = 0;
