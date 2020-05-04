@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql serialport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = banksimul_testausalusta
@@ -33,7 +33,11 @@ HEADERS += \
         mainwindow.h \
     loginwindow.h \
     korttipls.h \
-    tapahtumat.h
+    tapahtumat.h \
+    dllmysql.h \
+    dllmysql_global.h \
+    rfiddll.h \
+    rfiddll_global.h
 
 FORMS += \
         mainwindow.ui \
@@ -41,4 +45,5 @@ FORMS += \
     korttipls.ui \
     tapahtumat.ui
 
-LIBS = C:\QtData\build-Banksimul-Desktop_Qt_5_12_1_MinGW_64_bit-Release\release\DLLMySQL.dll
+LIBS +=C:\Taa\Banksimul-master\build-banksimul_testausalusta-Desktop_Qt_5_12_1_MinGW_64_bit-Debug\debug\dllmysql.dll
+LIBS +=C:\Taa\Banksimul-master\build-banksimul_testausalusta-Desktop_Qt_5_12_1_MinGW_64_bit-Debug\debug\rfidDLL.dll

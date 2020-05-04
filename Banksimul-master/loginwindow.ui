@@ -109,14 +109,14 @@
     <rect>
      <x>80</x>
      <y>40</y>
-     <width>281</width>
+     <width>291</width>
      <height>81</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Digital-7 Mono</family>
-     <pointsize>35</pointsize>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="text">
@@ -126,9 +126,9 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>452</x>
+     <x>422</x>
      <y>10</y>
-     <width>71</width>
+     <width>101</width>
      <height>20</height>
     </rect>
    </property>

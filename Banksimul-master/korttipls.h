@@ -2,6 +2,7 @@
 #define KORTTIPLS_H
 
 #include <QWidget>
+#include "rfiddll.h"
 
 namespace Ui {
 class korttipls;
@@ -18,11 +19,18 @@ public:
 private slots:
     void on_pushButtonfake_clicked();
 
+    void on_pushButton_clicked();
+
+public slots:
+    void kortinluku();
 signals:
     void aukaselogin();
 
 private:
     Ui::korttipls *ui;
+    RfidDLL *olioRfidDLL;
+    bool korttiPaikallaan = true;
+    QString kortinNumero;// = "0A0079C7BF";
 };
 
 #endif // KORTTIPLS_H
