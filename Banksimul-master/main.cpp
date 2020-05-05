@@ -7,7 +7,6 @@
 
 
 
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -27,7 +26,6 @@ int main(int argc, char *argv[])
     QObject::connect(&w, SIGNAL(aukaiseTapahtumat()), &w, SLOT(hide()));
     QObject::connect(&t, SIGNAL(aukasemaini()), &w, SLOT(show()));
     QObject::connect(&t, SIGNAL(suljeTapahtumat()), &t, SLOT(hide()));
-    //QObject::connect(olioRfidDLL, SIGNAL(signaaliRpSignaali()),this, SLOT(kortinLuku()));
 
     k.show();
 

@@ -5,8 +5,8 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QTimer>
-#include "dllmysql.h"
-
+#include "C:\QtData\Banksimul\DLLMySQL\dllmysql.h"
+#include "C:\QtData\trfidDLL\rfiddll.h"
 
 
 namespace Ui {

@@ -22,6 +22,10 @@ void loginwindow::on_pushButton_login_clicked()
     if (passu==objectDLLMySQL->getPIN())
     {
         aukasemaini();
+            ui->tonnit->setValue(0);
+            ui->sadat->setValue(0);
+            ui->kympit->setValue(0);
+            ui->yks->setValue(0);
         suljelogin();
 
     } else
@@ -66,5 +70,9 @@ void loginwindow::on_pushButton_clicked()
 {
     QMessageBox::critical(this,"HACKS!!!", "pakotetaas tääki sitte aukeemaan");
     aukasemaini();
+        ui->tonnit->setValue(0);
+        ui->sadat->setValue(0);
+        ui->kympit->setValue(0);
+        ui->yks->setValue(0);
     suljelogin();
 }

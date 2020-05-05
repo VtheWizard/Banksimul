@@ -29,9 +29,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>160</x>
      <y>10</y>
-     <width>321</width>
+     <width>271</width>
      <height>41</height>
     </rect>
    </property>
@@ -41,7 +41,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Viimeisimmät tilitapahtumat</string>
+    <string>Viimisimmät tapahtumat</string>
    </property>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
@@ -80,7 +80,7 @@
        </font>
       </property>
       <property name="text">
-       <string>  ID   TAPAHTUMA                SUMMA                             PÄIVÄYS</string>
+       <string>  ID   TAPAHTUMA                          SUMMA                                           PÄIVÄYS</string>
       </property>
      </widget>
     </item>

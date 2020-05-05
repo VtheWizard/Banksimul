@@ -2,8 +2,7 @@
 #define KORTTIPLS_H
 
 #include <QWidget>
-#include "rfiddll.h"
-
+#include "C:\QtData\trfidDLL\rfiddll.h"
 namespace Ui {
 class korttipls;
 }
@@ -21,8 +20,6 @@ private slots:
 
     void on_pushButton_clicked();
 
-public slots:
-    void kortinluku();
 signals:
     void aukaselogin();
 

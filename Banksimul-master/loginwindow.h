@@ -1,5 +1,6 @@
 #ifndef LOGINWINDOW_H
 #define LOGINWINDOW_H
+
 #include <QWidget>
 #include "mainwindow.h"
 
