@@ -8,7 +8,7 @@ RfidDLL::RfidDLL()
 void RfidDLL::palautaPankkikortinNumeroKomponentti()
 {
     serial = new QSerialPort(this);
-    serial->setPortName("COM3");
+    serial->setPortName("COM7");
     serial->setBaudRate(QSerialPort::Baud9600);
     serial->setDataBits(QSerialPort::Data8);
     serial->setParity(QSerialPort::NoParity);
@@ -49,8 +49,9 @@ QString RfidDLL::tulostus()
         qDebug() << "Kortin numero: " << cardSerialNumber << endl;
         palautettavaArvo=cardSerialNumber;
     }
-    else
-        qDebug()<<"Virhe korttia luettaessa!";
-
     return (palautettavaArvo);
+}
+
+void RfidDLL::nollaa() {
+    palautettavaArvo = "00000000";
 }

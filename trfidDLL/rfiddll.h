@@ -11,6 +11,7 @@ class RFIDDLLSHARED_EXPORT RfidDLL: public QObject
     Q_OBJECT
 public:
     RfidDLL();
+    void nollaa();
     void RFIDDLLSHARED_EXPORT palautaPankkikortinNumeroKomponentti();
 private:
 

@@ -22,5 +22,4 @@ unix {
     INSTALLS += target
 }
 
-#DESTDIR = C:\temp7\pankkiautomaattiEXE\
-DESTDIR = C:\Taa\Banksimul-master\build-banksimul_testausalusta-Desktop_Qt_5_12_1_MinGW_64_bit-Debug\debug
+DESTDIR = C:\QtData\build-Banksimul-Desktop_Qt_5_12_1_MinGW_64_bit-Release\release
