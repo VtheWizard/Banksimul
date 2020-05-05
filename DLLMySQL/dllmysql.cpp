@@ -63,7 +63,7 @@ QStringList DLLMySQL::paivitaTilitapahtuma() {
         if(maara.contains('-')) {
             etuliite = "NOSTO:\t\t ";
         } else {
-            etuliite = "TALLETUS:\t+";
+            etuliite = "TALLETUS:\t\t+";
         }
         paivays = query.value(2).toString();
         tapahtuma = QString("%1 %2%3\t\t %4")
